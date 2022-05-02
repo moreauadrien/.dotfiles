@@ -103,3 +103,4 @@ source $ZSH/oh-my-zsh.sh
 alias vim="nvim"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/home/adrien/.local/bin

@@ -20,3 +20,4 @@ set colorcolumn=80
 set signcolumn=yes
 set cursorline
 set updatetime=50
+set clipboard=unnamedplus

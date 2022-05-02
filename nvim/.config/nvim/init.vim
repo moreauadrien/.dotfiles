@@ -11,6 +11,12 @@ Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
+
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
+
+Plug 'sbdchd/neoformat'
 call plug#end()
 
 lua require("init")
@@ -33,3 +39,7 @@ augroup ADRIEN
     autocmd!
     autocmd BufWritePre * :call TrimWhitespace()
 augroup END
+
+nnoremap <leader>pr <cmd>Neoformat<cr>
+
+let g:neoformat_try_node_exe = 1
