@@ -102,6 +102,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias vim="nvim"
 alias dev="cd ~/Developments"
+alias hist=fzf_history
 export GOPATH=$HOME/go
 export PATH=$PATH:~/.local/bin
 export PATH=$PATH:$GOPATH/bin

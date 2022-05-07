@@ -1,0 +1,23 @@
+#!/usr/bin/python3
+
+import subprocess
+
+def get_zsh_history():
+    file = open("/home/adrien/.zsh_history")
+    raw_history = file.read().split("\n")
+    file.close()
+
+    history = map(lambda s: ";".join(s.split(";")[1:]), raw_history)
+    return "\n".join(list(history))
+
+def copy(content):
+    subprocess.run("xsel --clipboard".split(), input=content.encode("utf-8"))
+
+
+history = get_zsh_history()
+
+
+command = subprocess.run("fzf --tac".split(), stdout=subprocess.PIPE, input=history.encode("utf-8")).stdout.decode("utf-8")
+command = command[:-1]
+
+copy(command)
