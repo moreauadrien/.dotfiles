@@ -17,7 +17,7 @@ def copy(content):
 history = get_zsh_history()
 
 
-command = subprocess.run("fzf --tac".split(), stdout=subprocess.PIPE, input=history.encode("utf-8")).stdout.decode("utf-8")
+command = subprocess.run("fzf +s --tac".split(), stdout=subprocess.PIPE, input=history.encode("utf-8")).stdout.decode("utf-8")
 command = command[:-1]
 
 copy(command)
