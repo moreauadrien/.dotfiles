@@ -101,6 +101,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias vim="nvim"
+alias dev="cd ~/Developments"
 export GOPATH=$HOME/go
+export PATH=$PATH:~/.local/bin
 export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:/home/adrien/.local/bin
+export PATH=$PATH:/usr/local/go/bin
