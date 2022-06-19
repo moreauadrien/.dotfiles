@@ -107,3 +107,5 @@ export GOPATH=$HOME/go
 export PATH=$PATH:~/.local/bin
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/go/bin
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
