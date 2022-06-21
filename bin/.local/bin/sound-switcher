@@ -12,7 +12,7 @@ correspondance = {}
 for i in range(len(names)):
     correspondance[names[i]] = ids[i]
 
-selected = subprocess.run("fzf", stdout=subprocess.PIPE, input="\n".join(names).encode("utf-8")).stdout.decode("utf-8")
+selected = subprocess.run("/home/adrien/.fzf/bin/fzf", stdout=subprocess.PIPE, input="\n".join(names).encode("utf-8")).stdout.decode("utf-8")
 selected = selected[:len(selected) - 1]
 
 if len(selected) == 0:
