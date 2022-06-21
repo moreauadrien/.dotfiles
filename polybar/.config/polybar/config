@@ -68,7 +68,7 @@ font-1 = FontAwesome:size=10
 font-2 = siji:pixelsize=10;1
 
 modules-left = i3
-modules-center = xwindow 
+modules-center = xwindow
 modules-right = pulseaudio battery date powermenu
 
 tray-position = right
@@ -298,7 +298,7 @@ label-muted-foreground = #666
 ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
-ramp-volume-3 =  
+ramp-volume-3 = 
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
