@@ -124,8 +124,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # open the tui to change the sound output
-bindsym $mod+Shift+s exec "kitty --title=Sound-switcher --class=Sound-switcher /home/adrien/.local/bin/sound-switcher"
-
+bindsym $mod+shift+s exec "kitty --title=sound-switcher --class=sound-switcher /home/adrien/.local/bin/sound-switcher"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -163,11 +162,7 @@ exec --no-startup-id feh --bg-scale /home/adrien/Pictures/wallpaper.jpg
 for_window [class=".*"] border pixel 2
 for_window [class="Gnome-control-center|Blueman-manager|Sound-switcher"] floating enable
 
-gaps inner 10
-smart_gaps on
-smart_borders on
-
-set $active "#fecf35"
+# set $active "#fecf35"
 
 
 # class                 border  backgr. text    indicator child_border
