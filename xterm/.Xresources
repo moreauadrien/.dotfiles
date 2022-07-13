@@ -1,0 +1,8 @@
+XTerm*termName: xterm-256color
+XTerm*locale: true
+xterm*foreground: #dddddd
+XTerm*background: #333333
+
+XTerm*renderFont: true
+XTerm*faceName: Fira Mono 
+XTerm*faceSize: 16
