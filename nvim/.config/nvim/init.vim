@@ -26,4 +26,6 @@ colorscheme gruvbox
 hi CursorLine ctermbg=none
 highlight Normal guibg=none ctermbg=none
 
+nnoremap <C-a> <C-^>
+
 lua require("init")
