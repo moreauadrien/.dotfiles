@@ -27,5 +27,9 @@ hi CursorLine ctermbg=none
 highlight Normal guibg=none ctermbg=none
 
 nnoremap <C-a> <C-^>
+nnoremap <silent> <C-f> :silent !tmux neww tmux-sessionizer<CR>
+
+let g:neoformat_try_node_exe = 1
+
 
 lua require("init")

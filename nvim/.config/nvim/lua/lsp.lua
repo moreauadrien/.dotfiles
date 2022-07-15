@@ -17,6 +17,11 @@ require("lspconfig").gopls.setup{
     on_attach = on_attach
 }
 
+require("lspconfig").tsserver.setup{
+    capabilities = capabilities,
+    on_attach = on_attach
+}
+
 vim.opt.completeopt={"menu", "menuone", "noselect"}
 
 local cmp = require("cmp")
