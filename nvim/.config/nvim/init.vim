@@ -8,7 +8,9 @@ Plug 'sbdchd/neoformat'
 
 Plug 'neovim/nvim-lspconfig'
 
-" Complete plugins
+Plug 'TimUntersberger/neogit'
+
+" Competion plugins
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
@@ -29,7 +31,14 @@ highlight Normal guibg=none ctermbg=none
 nnoremap <C-a> <C-^>
 nnoremap <silent> <C-f> :silent !tmux neww tmux-sessionizer<CR>
 
+" Neoformat look for prettier in node_modules
 let g:neoformat_try_node_exe = 1
+
+" Autoformat on save
+augroup fmt
+  autocmd!
+  autocmd BufWritePre * undojoin | Neoformat
+augroup END
 
 
 lua require("init")
