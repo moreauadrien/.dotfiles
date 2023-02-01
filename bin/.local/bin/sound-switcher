@@ -1,0 +1,24 @@
+#!/usr/bin/python3
+
+import subprocess
+import re
+
+pactlOutput = subprocess.run("pactl list sinks".split(), stdout=subprocess.PIPE).stdout.decode("utf-8")
+names = re.findall(r"device.description = \"(.*)\"", pactlOutput)
+ids = re.findall(r"node.name = \"(.*)\"", pactlOutput)
+
+correspondance = {}
+
+for i in range(len(names)):
+    correspondance[names[i]] = ids[i]
+
+selected = subprocess.run("/home/adrien/.fzf/bin/fzf", stdout=subprocess.PIPE, input="\n".join(names).encode("utf-8")).stdout.decode("utf-8")
+selected = selected[:len(selected) - 1]
+
+if len(selected) == 0:
+    print("Your selection is not a valid sound output")
+    exit()
+
+selectedId = correspondance[selected]
+
+subprocess.run(["pactl", "set-default-sink", selectedId])
